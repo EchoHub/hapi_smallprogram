@@ -1,0 +1,87 @@
+{
+    "extends": "tslint:recommended",
+    "defaultSeverity": "warn",
+    "rules": {
+        "quotemark": [
+            true,
+            "single",
+            "avoid-escape"
+        ], //引号的使用规则
+        "no-var-keyword": false, // 禁用 var
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore"
+        ], //变量名规则
+        "ordered-imports": false, //import 不排序
+        "object-literal-sort-keys": false, //和前面那条类似
+        "semicolon": [
+            false,
+            "always",
+            "ignore-interfaces"
+        ], //分号的使用规则
+        "indent": [
+            true,
+            "spaces",
+            4
+        ], //使用4空格进行缩进
+        "interface-name": false, // 强制接口 "I" 开头
+        "typedef-whitespace": false, //在类型定义的时候，是否允许使用空格, 使用false，表示不对此项进行校验,不启用此项的校验
+        "whitespace": false, //空格的校验
+        "member-access": [
+            true,
+            "no-public"
+        ], //类成员的显示可见性声明，即显示定义一个类的成员是否可见，即对类成员定义public | static 等
+        "one-line": false, //要求指定的标记与它们之前的表达式位于同一行
+        "no-console": false, //是否允许使用console
+        "only-arrow-functions": false,
+        "arrow-parens": false,
+        "ban-types": [
+            true,
+            [
+                "Object",
+                "Use {} instead."
+            ],
+            [
+                "String"
+            ]
+        ],
+        "max-line-length": [
+            true,
+            {
+                "limit": 200,
+                "ignore-pattern": "^import |^export {(.*?)}|class [a-zA-Z]+ implements |//"
+            }
+        ],
+        "max-classes-per-file": [
+            true,
+            1
+        ], // 单个文件最多几个类
+        "trailing-comma": [
+            true,
+            { //对尾随逗号的校验
+                "multiline": {
+                    "objects": "ignore",
+                    "arrays": "never",
+                    "functions": "never",
+                    "typeLiterals": "ignore"
+                },
+                "esSpecCompliant": true //是否允许尾随逗号出现在剩余变量中
+            }
+        ],
+        "no-shadowed-variable": [
+            true,
+            {
+                "class": true,
+                "enum": true,
+                "function": true,
+                "interface": false,
+                "namespace": true,
+                "typeAlias": false,
+                "typeParameter": false
+            }
+        ]
+    },
+    "rulesDirectory": []
+}

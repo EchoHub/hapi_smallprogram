@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": true,
+    "sourceMap": true
+  },
+  "include": [
+    "src/app/*",
+    "src/components/**/*",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
