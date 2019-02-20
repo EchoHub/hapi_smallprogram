@@ -2,6 +2,7 @@ var webpack = require("webpack")
 var merge = require("webpack-merge")
 var path = require("path")
 var BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
+// var CopyWebpackPlugin = require("copy-webpack-plugin")
 var base = require("./base.webpack")
 module.exports = merge(base, {
     // optimization: {
@@ -29,5 +30,8 @@ module.exports = merge(base, {
             maxInitialRequests: 3,
             name: true
         })
+        // new CopyWebpackPlugin([ // 复制插件
+        //     { from: path.join(__dirname,'src/libs/**/* */'), to:  path.join(__dirname,'dist/libs/') }
+        //   ])
     ]
 })
